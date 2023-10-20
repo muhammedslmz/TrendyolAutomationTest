@@ -1,12 +1,9 @@
 package Pages;
 
-import javafx.scene.control.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class LoginPage extends BasePage{
     By loginPageBtn =new ByXPath("/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[3]/div/div/div/div[1]/div[1]/p");
@@ -22,6 +19,17 @@ public class LoginPage extends BasePage{
     public LoginPage(WebDriver driver) {
         super(driver);
     }
+
+    public void mainPage(){
+        drivers().get("https://www.trendyol.com/erkek-gunes-gozlugu-x-g2-c105");
+        boolean isPopupVisible = isDisplay(By.xpath("/html/body/div[1]/div[5]/div/div/div/div[1]/div[2]/div[4]/div[1]/div/div[4]/div[1]/a/div[2]"));
+        if(isPopupVisible)
+            click(By.xpath("/html/body/div[1]/div[5]/div/div/div/div[1]/div[2]/div[4]/div[1]/div/div[4]/div[1]/a/div[2]"));
+
+        click(By.xpath("/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[1]/a"));
+        boolean isInMainPage = isDisplay(By.xpath("/html/body/div[1]/div[3]/div[2]/div/div/div/div/div/article[2]/div/div/div/div/a[1]"));
+        Assert.assertTrue(isInMainPage);
+    }
     public void login (){
         click(popup);
         click(popupCloseBtn);
@@ -30,17 +38,43 @@ public class LoginPage extends BasePage{
         send(loginPassword,"172126Mm");
         click(loginBtn);
 
+        boolean loginCheck =isDisplay(loginError);
+        Assert.assertFalse(loginCheck);
+    }
+    public void invalidMailLogin(){
+        click(popup);
+        click(popupCloseBtn);
+        click(loginPageBtn);
+        send(loginEmail,"invalid_mail");
+        send(loginPassword,"172126Mm");
+        click(loginBtn);
+        boolean error = isDisplay(loginError);
+        Assert.assertTrue(error);
 
     }
-    public void invalidLogin(){
+    public void invalidPasswordlLogin(){
         click(popup);
         click(popupCloseBtn);
         click(loginPageBtn);
         send(loginEmail,"muhammed.slmz@gmail.com");
-        send(loginPassword,"172126Mm");
+        send(loginPassword,"invalid_password");
         click(loginBtn);
-        isDisplay(loginError);
+        boolean error = isDisplay(loginError);
+        Assert.assertTrue(error);
+
     }
+    public void invalidInfolLogin(){
+        click(popup);
+        click(popupCloseBtn);
+        click(loginPageBtn);
+        send(loginEmail,"invalid_mail");
+        send(loginPassword,"invalid_password");
+        click(loginBtn);
+        boolean error = isDisplay(loginError);
+        Assert.assertTrue(error);
+
+    }
+
 
 }
 
