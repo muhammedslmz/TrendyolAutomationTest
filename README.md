@@ -1,5 +1,5 @@
-Bu depo Trendyol alışveriş sitesi üzerinden örnek olarak test otomasyonu yapmak için selenium kullanılarak java programlama ile yazılmıştır.
-Aynı zamanda bu depo 5 farklı senaryo altında 21 farklı test case içeriyor.
+This repository was written in java programming using selenium to perform test automation, for example through the Trendyol shopping site.
+At the same time, this repository contains 21 different test cases under 5 different scenarios.
 1. Login Page
   + <code>mainPageTest</code>
   + <code>loginTest</code>
@@ -26,3 +26,6 @@ Aynı zamanda bu depo 5 farklı senaryo altında 21 farklı test case içeriyor.
   + <code>isDisplaySuggestionTest</code>
   + <code>searchHistoryTest</code>
   + <code>clearSearchHistortTest</code>
+### How to run?
++Login Page: Case001
+*Product Basket: Case002
