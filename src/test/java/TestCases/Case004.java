@@ -26,4 +26,5 @@ public class Case004 extends BaseTest {
         Favourites accessFavouritesWithoutLogin = new Favourites(driver);
         accessFavouritesWithoutLogin.notAccessFavouritesWithoutLogin();
     }
+
 }

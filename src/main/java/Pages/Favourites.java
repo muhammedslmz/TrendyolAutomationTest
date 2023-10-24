@@ -16,19 +16,23 @@ public class Favourites extends BasePage{
             click(popup);
             click(popupCloseBtn);
         }
-        boolean checkFavouritesBtn =isDisplay(favouritesBtn);
-        Assert.assertTrue(checkFavouritesBtn);
+        //boolean checkFavouritesBtn =isDisplay(favouritesBtn);
+        Assert.assertTrue(isDisplay(favouritesBtn));
 
 
     }
     public void accessFavourites(){
         click(favouritesBtn);
-        boolean isInFavourites = isDisplay(By.xpath("//span[normalize-space()='Favorilerim']"));
-        Assert.assertTrue(isInFavourites);
+        //boolean isInFavourites = isDisplay(By.xpath("//span[normalize-space()='Favorilerim']"));
+        Assert.assertTrue(isDisplay(By.xpath("//span[normalize-space()='Favorilerim']")));
     }
     public void notAccessFavouritesWithoutLogin(){
+        if(isDisplay(popup)){
+            click(popup);
+            click(popupCloseBtn);
+        }
         click(favouritesBtn);
-        boolean isInFavourites = isDisplay(By.xpath("/html/body/div[1]/div[3]/div[3]/div[1]/form/button"));
-        Assert.assertTrue(isInFavourites);
+        //boolean isInFavourites = isDisplay(By.xpath("/html/body/div[1]/div[3]/div[3]/div[1]/form/button"));
+        Assert.assertTrue(isDisplay(By.xpath("/html/body/div[1]/div[3]/div[3]/div[1]/form/button")));
     }
 }

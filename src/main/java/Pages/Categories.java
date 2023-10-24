@@ -3,6 +3,7 @@ package Pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 import java.util.Objects;
@@ -16,20 +17,13 @@ public class Categories extends BasePage{
     By boschCheckBox = new By.ByXPath("/html/body/div[1]/div[3]/div[2]/div[2]/div/div/div/div[1]/div[1]/div/div/div[2]/div[3]/div/div/div[1]/div/a/div[1]");
     By arçelikCheckBox = new By.ByXPath("/html/body/div[1]/div[3]/div[2]/div[2]/div/div/div/div[1]/div[1]/div/div/div[2]/div[3]/div/div/div[2]/div/a/div[1]");
     By product = new By.ByXPath("//div[@data-id='442952583']//div[@class='image-overlay-body']");
+    By cepTelefonuCategories = new By.ByXPath("//div[@id='sub-nav-5']//a[contains(text(),'Cep Telefonu')]");
     WebElement x;
-    String arçelik="Arçelik", bosch ="Bosch";
+    String arcelik ="Arçelik", bosch ="Bosch";
     public Categories(WebDriver driver) {
         super(driver);
     }
-    public void searchBox(){
-        click(searchBoxArea);
 
-        /*
-        WebElement searchBoxArea= drivers().findElement(By.xpath("//div[@id='sfx-discovery-search-suggestions']//div[@class='mOkuL__p']//div[@class='N4M8bfaJ']//input[@class='V8wbcUhU']"));
-        Actions action =new Actions(drivers());
-        action.moveToElement(searchBoxArea).perform();
-         */
-    }
     public void brandCategorization(){
         click(popup);
         click(popupCloseBtn);
@@ -48,8 +42,7 @@ public class Categories extends BasePage{
                 drivers().switchTo().window(windowHandle);
                 x= drivers().findElement(By.xpath("//h1[@class='pr-new-br']//a[@class='product-brand-name-with-link']"));
                 String brand =x.getText();
-                boolean brandCheck = Objects.equals(brand, arçelik) || Objects.equals(brand, bosch);
-                Assert.assertTrue(brandCheck);
+                Assert.assertTrue(Objects.equals(brand, arcelik) || Objects.equals(brand, bosch));
                 drivers().switchTo().window(originalWindow);
             }
         }
@@ -60,8 +53,7 @@ public class Categories extends BasePage{
                 drivers().switchTo().window(windowHandle);
                 x= drivers().findElement(By.xpath("//h1[@class='pr-new-br']//a[@class='product-brand-name-with-link']"));
                 String brand =x.getText();
-                boolean brandCheck = Objects.equals(brand, arçelik) || Objects.equals(brand, bosch);
-                Assert.assertTrue(brandCheck);
+                Assert.assertTrue(Objects.equals(brand, arcelik) || Objects.equals(brand, bosch));
                 drivers().switchTo().window(originalWindow);
             }
         }
@@ -94,8 +86,19 @@ public class Categories extends BasePage{
         int price = Integer.parseInt(clearPrice);
 
         if(price>=lowerLimit && price<=upperLimit){
-            boolean rightInterval= true;
-            Assert.assertTrue(rightInterval);
+            Assert.assertTrue(true);
         }
+    }
+    public void productPath(){
+        click(popup);
+        click(popupCloseBtn);
+        WebElement elektronikBtnArea=drivers().findElement(By.xpath("//a[@class='category-header navbar-first-cap'][normalize-space()='Elektronik']"));
+        Actions action = new Actions(drivers());
+        action.moveToElement(elektronikBtnArea).perform();
+        click(By.xpath("//div[@id='sub-nav-5']//div[@class='sub-nav-outer']"));
+        click(cepTelefonuCategories);
+        Assert.assertTrue(isDisplay(By.xpath("//div[@class='breadcrumb']")));
+
+
     }
 }

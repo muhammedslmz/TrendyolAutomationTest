@@ -4,20 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ebe23067-4cd3-4b88-a227-595aa01ff0c6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Categories.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/Favourites.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestCases/Case003.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestCases/Case004.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ebe23067-4cd3-4b88-a227-595aa01ff0c6" name="Changes" comment="Added new tests.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Pages/SearchBox.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestCases/Case005.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Categories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Categories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Favourites.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Favourites.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/ProductBasket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/ProductBasket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Drivers/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Drivers/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestCases/Case001.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCases/Case001.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestCases/Case002.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCases/Case002.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestCases/Case003.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCases/Case003.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestCases/Case004.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestCases/Case004.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,42 +50,7 @@
     &quot;last_directory_selection&quot;: &quot;C:/Users/Muhammed/IdeaProjects/TrendyolAutomationTest/src/test/java&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.Case004">
-    <configuration name="Case001" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TrendyolAutomationTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TestCases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="TestCases" />
-      <option name="MAIN_CLASS_NAME" value="TestCases.Case001" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Case001.mainPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TrendyolAutomationTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="TestCases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="TestCases" />
-      <option name="MAIN_CLASS_NAME" value="TestCases.Case001" />
-      <option name="METHOD_NAME" value="mainPageTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.Case005">
     <configuration name="Case002" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TrendyolAutomationTest" />
       <extension name="coverage">
@@ -98,6 +62,24 @@
       <option name="PACKAGE_NAME" value="TestCases" />
       <option name="MAIN_CLASS_NAME" value="TestCases.Case002" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Case002.numOfProductsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TrendyolAutomationTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestCases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestCases" />
+      <option name="MAIN_CLASS_NAME" value="TestCases.Case002" />
+      <option name="METHOD_NAME" value="numOfProductsTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -138,13 +120,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Case005" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TrendyolAutomationTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="TestCases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="TestCases" />
+      <option name="MAIN_CLASS_NAME" value="TestCases.Case005" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Case005" />
         <item itemvalue="TestNG.Case004" />
-        <item itemvalue="TestNG.Case001.mainPageTest" />
         <item itemvalue="TestNG.Case003" />
         <item itemvalue="TestNG.Case002" />
-        <item itemvalue="TestNG.Case001" />
+        <item itemvalue="TestNG.Case002.numOfProductsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -157,6 +156,14 @@
       <option name="presentableId" value="Default" />
       <updated>1697092445178</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added new tests.">
+      <created>1697807218627</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697807218627</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,15 +177,24 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added new tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new tests." />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Pages/BasePage.java</url>
-          <line>27</line>
+          <line>30</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/TrendyolAutomationTest$Case005_isDisplaySuggestionTest.ic" NAME="Case005.isDisplaySuggestionTest Coverage Results" MODIFIED="1698049869615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>TestCases.*</FILTER>
+    </SUITE>
   </component>
 </project>

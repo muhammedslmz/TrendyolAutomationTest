@@ -48,8 +48,7 @@ public class ProductBasket extends BasePage{
                 click(addBasketBtn);
             }
         }
-        boolean basketControl = isDisplay(basketBtnVisibility);
-        Assert.assertTrue(basketControl);
+        Assert.assertTrue(isDisplay(basketBtnVisibility));
     }
 
     public void isInBasket(){
@@ -59,20 +58,16 @@ public class ProductBasket extends BasePage{
         scrollPageElement(drivers().findElement(productFeatures));
         y = drivers().findElement(By.xpath("/html/body/div[1]/div[5]/main/div/section/div/ul/li[6]/span[2]/b"));
         String featureControl = y.getText();
-        boolean check = feature==featureControl;
-        Assert.assertFalse(check);
+        Assert.assertFalse(feature==featureControl);
 
     }
     public void basketIconNum (){
         numOfProducts = drivers().findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div[3]/div/div/div/div[2]/a/div[2]"));
         String numOfBasketProducts = numOfProducts.getText();
         click(basketBtn);
-        System.out.println("1: "+numOfBasketProducts);
+
         z = drivers().findElement(By.xpath("//div[@class='ty-display-flex ty-numeric-counter']//input[@class='counter-content']"));
         String numOfProductsInBasket=z.getAttribute("value");
-        System.out.println( "2: "+ numOfProductsInBasket    );
-        //boolean numOfProductsControl = numOfProductsInBasket==numOfBasketProducts;
-        //Assert.assertTrue(numOfProductsControl);
         Assert.assertEquals(numOfBasketProducts,numOfProductsInBasket);
     }
     public void changeProductAmount(){
@@ -83,22 +78,23 @@ public class ProductBasket extends BasePage{
         waitForSecond(2);
         x= drivers().findElement(By.xpath("/html/body/div[1]/div[3]/div/div[1]/aside/div/div[2]/ul/li[1]/strong"));
         String increasedTotalPrice= x.getText();
-        boolean priceControl =totalPrice!=increasedTotalPrice;
-        Assert.assertTrue(priceControl);
+        Assert.assertTrue(totalPrice!=increasedTotalPrice);
 
         click(decreaseAmountBtn);
         waitForSecond(2);
         y= drivers().findElement(By.xpath("/html/body/div[1]/div[3]/div/div[1]/aside/div/div[2]/ul/li[1]/strong"));
         String decreasedTotalPrice= x.getText();
-        boolean priceControl2 =decreasedTotalPrice!=increasedTotalPrice;
-        Assert.assertTrue(priceControl2);
+        Assert.assertTrue(decreasedTotalPrice!=increasedTotalPrice);
+    }
+    public void isDisplaySeller(){
+        click(basketBtn);
+        Assert.assertTrue(isDisplay(By.xpath("/html/body/div[1]/div[3]/div/div[1]/div/div[3]/div[1]/div/div[1]")));
     }
     public void deleteProduct(){
         click(basketBtn);
         click(deleteBtn);
         waitForSecond(2);
-        boolean isDeleted =isDisplay(By.xpath("//div[@class='pb-basket-item-details']//p[@class='pb-item']"));
-        Assert.assertFalse(isDeleted);
+        Assert.assertFalse(isDisplay(By.xpath("//div[@class='pb-basket-item-details']//p[@class='pb-item']")));
     }
 
 }
