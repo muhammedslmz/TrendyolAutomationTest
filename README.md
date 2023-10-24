@@ -27,6 +27,5 @@ At the same time, this repository contains 21 different test cases under 5 diffe
   + <code>searchHistoryTest</code>
   + <code>clearSearchHistortTest</code>
 ### How to run?
-+Login Page: Case001
-
-  *Product Basket: Case002
++ Login Page: Case001
+* Product Basket: Case002
