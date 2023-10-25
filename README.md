@@ -1,5 +1,6 @@
 This repository was written in java programming using selenium to perform test automation, for example through the Trendyol shopping site.
 At the same time, this repository contains 21 different test cases under 5 different scenarios.
+
 ## 1. Login Page
 
   + <code>mainPageTest</code>
