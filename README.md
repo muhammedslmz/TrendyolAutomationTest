@@ -29,3 +29,6 @@ At the same time, this repository contains 21 different test cases under 5 diffe
 ### How to run?
 + Login Page: Case001
 * Product Basket: Case002
+* Categories: Case003
+* Favourites: Case004
+* Search Box: Case005
